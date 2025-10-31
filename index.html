@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Java Quiz - Login</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="container">
+    <!-- Parte Esquerda -->
+    <div class="left">
+      <h1>
+        Cada pergunta é uma<br />
+        oportunidade: teste suas<br />
+        habilidades e conquiste o mundo<br />
+        do <span class="highlight">código Java!</span>
+      </h1>
+
+      <img src="img/image 3.png" alt="Java Quiz" class="illustration" />
+
+      <div class="dots">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+    </div>
+
+    <!-- Parte Direita -->
+    <div class="right">
+      <div class="login-box">
+        <h2 class="logo">Java Quiz</h2>
+        <h3>Entrar</h3>
+
+        <form>
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="email@exemplo.com" required />
+
+          <label for="senha">Senha</label>
+          <input type="password" id="senha" placeholder="insira sua senha" required />
+
+          <div class="options">
+            <label><input type="checkbox" id="manter" /> Manter-me conectado</label>
+            <a href="#">Recuperar senha</a>
+          </div>
+
+          <div class="buttons">
+            <button type="submit" class="btn entrar">Entrar</button>
+            <button type="button" class="btn cadastrar">Cadastre-se</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
