@@ -1,0 +1,235 @@
+/* CSS tela de cadastro baseado no layout da index */
+
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Roboto+Slab:wght@400;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto Slab', serif;
+  background-color: #1b1b1b;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  width: 90%;
+  max-width: 1100px;
+  height: 100vh;
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* Lado esquerdo (branco) */
+.left {
+  flex: 1;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 40px;
+  font-weight: 700;
+  color: #000000;
+}
+
+.left h1 {
+  font-size: 1.6rem;
+  line-height: 1.6;
+}
+
+.left .highlight {
+  color: #f47b20;
+  font-style: italic;
+}
+
+/* Lado direito (azul) */
+.right {
+  flex: 1;
+  background-color: #0f2d52;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+.cadastro-box {
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 20px 20px;
+  text-align: center;
+  max-width: 400px;
+  width: 100%;
+}
+
+.logo {
+  font-family: 'Alfa Slab One', cursive;
+  color: #f47b20;
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+h3 {
+  color: #0f2d52;
+  font-weight: 800;
+  margin-bottom: 25px;
+}
+
+label {
+  display: block;
+  text-align: left;
+  color: #0f2d52;
+  font-weight: 700;
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-family: inherit;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.btnCadastrar {
+  background-color: #0f2d52;
+  color: #fff;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 3px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: 0.3s;
+  width: 100%;
+}
+
+.btnCadastrar:hover {
+  opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    height: auto;
+    width: 95%;
+  }
+
+  .left, .right {
+    flex: none;
+    width: 100%;
+    padding: 20px;
+  }
+
+  .left h1 {
+    font-size: 1.2rem;
+  }
+
+  .cadastro-box {
+    padding: 30px 25px;
+    max-width: 100%;
+  }
+
+  body {
+    height: auto;
+    padding: 20px 0;
+  }
+}
+/* BOTÕES MELHORADOS */
+
+.criarConta {
+  background-color: #0f2d52;
+  color: #fff;
+  width: 50%;
+  margin-bottom: 22px;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 20px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: 0.3s ease;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+}
+
+.criarConta:hover {
+  transform: scale(1.02);
+  opacity: .93;
+}
+
+/* container dos botões sociais */
+.socialButtons {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.socialButtons .btn {
+  width: 48%;
+  padding: 12px 0;
+  border: none;
+  border-radius: 8px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: .3s ease;
+  box-shadow: 0 3px 6px rgba(0,0,0,.15);
+}
+
+/* microsoft */
+.microsoft {
+  background-color: #707070;
+  color: #fff;
+}
+
+.microsoft:hover {
+  transform: scale(1.04);
+  opacity: .92;
+}
+
+/* google */
+.google {
+  background-color: #1b1b1b;
+  color: #fff;
+}
+
+.google:hover {
+  transform: scale(1.04);
+  opacity: .92;
+}
+/* CENTRALIZAÇÃO DAS FRASES LOGIN E TERMOS */
+
+.loginLink,
+.termos {
+  text-align: center;
+  display: block;
+  width: 100%;
+}
+
+.loginLink {
+  margin-top: 10px;
+  margin-bottom: 14px; /* espaço entre login e termos */
+  font-size: 0.85rem;
+}
+
+.termos {
+  font-size: 0.75rem;
+  line-height: 1.3rem;
+  margin-bottom: 18px;
+}
+  .illustration {
+    width: 100%;
+    max-width: 500px;
+    margin-top: 5px;
+     margin-bottom: 50px;
+  }
