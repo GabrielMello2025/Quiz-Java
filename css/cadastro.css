@@ -27,7 +27,7 @@ body {
   overflow: hidden;
 }
 
-/* Lado esquerdo (branco) */
+
 .left {
   flex: 1;
   background-color: #fff;
@@ -51,7 +51,7 @@ body {
   font-style: italic;
 }
 
-/* Lado direito (azul) */
+
 .right {
   flex: 1;
   background-color: #0f2d52;
@@ -146,7 +146,7 @@ input {
     padding: 20px 0;
   }
 }
-/* BOTÕES MELHORADOS */
+
 
 .criarConta {
   background-color: #0f2d52;
@@ -167,7 +167,7 @@ input {
   opacity: .93;
 }
 
-/* container dos botões sociais */
+
 .socialButtons {
   display: flex;
   justify-content: space-between;
@@ -186,7 +186,7 @@ input {
   box-shadow: 0 3px 6px rgba(0,0,0,.15);
 }
 
-/* microsoft */
+
 .microsoft {
   background-color: #707070;
   color: #fff;
@@ -197,7 +197,7 @@ input {
   opacity: .92;
 }
 
-/* google */
+
 .google {
   background-color: #1b1b1b;
   color: #fff;
@@ -207,7 +207,7 @@ input {
   transform: scale(1.04);
   opacity: .92;
 }
-/* CENTRALIZAÇÃO DAS FRASES LOGIN E TERMOS */
+
 
 .loginLink,
 .termos {
@@ -218,7 +218,7 @@ input {
 
 .loginLink {
   margin-top: 10px;
-  margin-bottom: 14px; /* espaço entre login e termos */
+  margin-bottom: 14px; 
   font-size: 0.85rem;
 }
 
@@ -233,3 +233,21 @@ input {
     margin-top: 5px;
      margin-bottom: 50px;
   }
+
+
+.campo-senha {
+  position: relative;
+}
+
+.verSenha {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 18px;
+  color: #0f2d52;
+  font-weight: bold;
+  
+}
+

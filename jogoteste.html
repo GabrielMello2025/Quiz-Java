@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Desafio Java</title>
+    <link rel="stylesheet" href="css/jogoteste.css">
+</head>
+<body>
+
+<div class="quiz-container">
+
+    <header class="quiz-header">
+        <h1 id="quiz-title">Desafio Java: Carregando...</h1>
+
+        <div class="header-info">
+            <div class="info-box" id="user-info">
+                <span class="icon">👤</span> Carregando...
+            </div>
+            <div class="info-box" id="question-counter">
+                <span class="icon">❓</span> Questão: 0/0
+            </div>
+            <div class="info-box" id="timer-score">
+                <span class="icon">⏱</span> 20s | ⭐ 0
+            </div>
+        </div>
+    </header>
+
+    <main class="quiz-content">
+
+        <div class="question-box">
+            <p id="question-text">Carregando pergunta...</p>
+        </div>
+
+        <div class="option btn" id="option-a"></div>
+        <div class="option btn" id="option-b"></div>
+        <div class="option btn" id="option-c"></div>
+        <div class="option btn" id="option-d"></div>
+
+
+        <div class="progress-bar" id="progress-bar"></div>
+
+        <button class="confirmar" id="confirm-btn">Confirmar</button>
+
+    </main>
+
+</div>
+
+
+<script src="js/questions.js"></script>
+<script src="js/jogoteste.js"></script>
+</body>
+</html>

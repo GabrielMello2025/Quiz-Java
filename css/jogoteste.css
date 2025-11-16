@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Times New Roman", serif;
+}
+
+body {
+    background: #e5e5e5;
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+}
+
+.quiz-container {
+    width: 820px;
+    background: white;
+    border-radius: 12px;
+    border: 2px solid #c5c5c5;
+    overflow: hidden;
+}
+
+
+.quiz-header {
+    background: #12385c;
+    color: white;
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.quiz-header h1 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.header-info {
+    display: flex;
+    gap: 20px;
+}
+
+.info-box {
+    background: rgba(255,255,255,0.15);
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.icon {
+    font-size: 15px;
+}
+
+
+.quiz-content {
+    padding: 40px 40px 50px 40px;
+    text-align: center;
+}
+
+.question-box {
+    width: 90%;
+    margin: 0 auto 40px auto;
+    padding: 25px 0;
+    border: 2px solid #cfd8e0;
+    border-radius: 10px;
+    background: #f8f8f8;
+}
+
+.question-box p {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.btn {
+    width: 260px;
+    margin: 12px auto;
+    padding: 12px;
+    background: #fafafa;
+    border: 2px solid #dcdcdc;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.2s;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background: #e8e8e8;
+}
+
+
+.progress-bar {
+    display: flex;
+    gap: 8px;
+    margin: 30px auto 40px auto;
+    justify-content: center;
+}
+
+.square {
+    width: 40px;
+    height: 20px;
+    background: #d1dbe6;
+    border: 2px solid #b0b9c4;
+    border-radius: 3px;
+}
+
+.filled {
+    background: #12385c;
+}
+
+
+.confirmar {
+    background: #12385c;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.confirmar:hover {
+    background: #0f2a45;
+}
+.option.selected {
+    background: #cfe0f5;
+    border-color: #7aa1c4;
+}

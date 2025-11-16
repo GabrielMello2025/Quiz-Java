@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Times New Roman", serif;
+}
+
+
+body {
+    background: #e4e4e4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px; 
+    min-height: 100vh;
+}
+
+
+.container {
+    width: 420px;
+    max-width: 95%; 
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #cfcfcf;
+}
+
+
+.header {
+    background: #12385c;
+    padding: 20px;
+    text-align: center;
+}
+
+.header h1 {
+    color: #ffa726;
+    font-size: 22px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+
+.content {
+    padding: 35px 25px;
+    text-align: center;
+}
+
+.content h2 {
+    font-size: 12px;
+    letter-spacing: 1px;
+    margin-bottom: 25px;
+    font-weight: bold;
+}
+
+
+.btn {
+    width: 100%;
+    max-width: 250px;
+    padding: 12px;
+    background: #f3f3f3;
+    border: 1px solid #d3d3d3;
+    border-radius: 8px;
+    margin: 10px auto;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.btn:hover {
+    background: #e8e8e8;
+}
+
+.btn.selected {
+    background: #cfe3ff;
+    border-color: #7da7d9;
+}
+
+
+.confirmar {
+    margin-top: 25px;
+    background: #12385c;
+    color: white;
+    width: 100%;
+    max-width: 180px;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.confirmar:hover {
+    background: #0d2b47;
+}
+
+
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 20px;
+    }
+
+    .content h2 {
+        font-size: 11px;
+    }
+
+    .btn {
+        font-size: 14px;
+        padding: 12px;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .header h1 {
+        font-size: 18px;
+    }
+
+    .content {
+        padding: 25px 18px;
+    }
+
+    .btn {
+        font-size: 13px;
+        padding: 10px;
+        max-width: 220px;
+    }
+
+    .confirmar {
+        font-size: 14px;
+        padding: 10px;
+        max-width: 160px;
+    }
+}
+
+
+@media (max-width: 360px) {
+    .header h1 {
+        font-size: 16px;
+    }
+
+    .btn {
+        max-width: 200px;
+        font-size: 12px;
+        padding: 9px;
+    }
+
+    .confirmar {
+        max-width: 150px;
+        font-size: 13px;
+    }
+
+    .content h2 {
+        font-size: 10px;
+    }
+}
