@@ -1,23 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Roboto+Slab:wght@400;600;700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Times New Roman", serif;
+    font-family: 'Roboto Slab', serif;
 }
 
 body {
     background: #e5e5e5;
     display: flex;
     justify-content: center;
-    padding-top: 40px;
+    /* Removido o padding-top fixo para melhor ajuste em celulares */
+    padding-top: 40px; 
+    /* Adicionamos altura total para centralização em desktop */
+    min-height: 100vh; 
+    
 }
 
 .quiz-container {
-    width: 820px;
+    /* REMOVIDO: width: 820px; */
+    width: 95%; /* Usa a maior parte da largura em qualquer tela */
+    max-width: 820px; /* Mantém o limite de 820px para telas grandes */
     background: white;
     border-radius: 12px;
     border: 2px solid #c5c5c5;
     overflow: hidden;
+    /* Altura ajustável: */
+    height: auto; 
+    margin-bottom: 40px;
 }
 
 
@@ -26,18 +37,26 @@ body {
     color: white;
     padding: 20px 30px;
     display: flex;
+    /* Ajustado para quebrar o layout se necessário */
+    flex-wrap: wrap; 
     justify-content: space-between;
     align-items: center;
+    gap: 15px; /* Adicionado gap para espaçamento em telas menores */
 }
 
 .quiz-header h1 {
     font-size: 20px;
-    font-weight: bold;
+    font-weight: 700;
+    /* Garante que o título não seja muito largo */
+    flex-shrink: 0; 
 }
 
 .header-info {
     display: flex;
     gap: 20px;
+    /* Permite que as caixas de informação quebrem a linha */
+    flex-wrap: wrap; 
+    justify-content: flex-end;
 }
 
 .info-box {
@@ -68,11 +87,14 @@ body {
 
 .question-box p {
     font-size: 18px;
-    font-weight: bold;
+    font-weight: 700;
+    padding: 0 15px; /* Adicionado padding para texto não encostar nas bordas em mobile */
 }
 
 .btn {
-    width: 260px;
+    /* MUDANÇA ESSENCIAL: Ocupa toda a largura do container-content, menos o padding */
+    width: 100%; 
+    max-width: 500px; /* Limite opcional para botões não ficarem muito longos em desktop */
     margin: 12px auto;
     padding: 12px;
     background: #fafafa;
@@ -81,7 +103,7 @@ body {
     cursor: pointer;
     font-size: 16px;
     transition: 0.2s;
-    font-weight: bold;
+    font-weight: 700;
 }
 
 .btn:hover {
@@ -89,15 +111,20 @@ body {
 }
 
 
+/* BARRA DE PROGRESSO */
 .progress-bar {
     display: flex;
     gap: 8px;
     margin: 30px auto 40px auto;
     justify-content: center;
+    /* Adicionada rolagem horizontal para barras muito longas em mobile */
+    overflow-x: auto; 
+    padding-bottom: 5px; /* Espaço para a barra de rolagem */
 }
 
 .square {
-    width: 40px;
+    /* Tamanho do quadrado ajustado para ser mais flexível */
+    min-width: 40px; 
     height: 20px;
     background: #d1dbe6;
     border: 2px solid #b0b9c4;
@@ -112,7 +139,7 @@ body {
 .confirmar {
     background: #12385c;
     color: white;
-    font-weight: bold;
+    font-weight: 700;
     font-size: 16px;
     padding: 12px 30px;
     border: none;
@@ -127,4 +154,54 @@ body {
 .option.selected {
     background: #cfe0f5;
     border-color: #7aa1c4;
+}
+
+/* -------------------------------------------------------------------------- */
+/* MEDIA QUERIES                                */
+/* -------------------------------------------------------------------------- */
+
+@media (max-width: 600px) {
+    body {
+        /* Remove o padding superior em telas muito pequenas */
+        padding-top: 10px; 
+        min-height: auto;
+    }
+    
+    .quiz-header {
+        /* Altera para layout de coluna em telas pequenas */
+        flex-direction: column; 
+        align-items: flex-start;
+    }
+    
+    .header-info {
+        /* Faz as caixas de info ficarem uma abaixo da outra se necessário */
+        justify-content: flex-start; 
+        width: 100%;
+        gap: 10px;
+    }
+    
+    .quiz-content {
+        padding: 20px 15px 30px 15px;
+    }
+
+    .question-box {
+        width: 100%;
+        margin-bottom: 25px;
+        padding: 15px 0;
+    }
+    
+    .question-box p {
+        font-size: 16px;
+    }
+
+    .btn {
+        padding: 10px;
+        font-size: 15px;
+    }
+
+    .confirmar {
+        width: 100%;
+        max-width: 250px;
+        font-size: 15px;
+    }
 }

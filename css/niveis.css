@@ -1,70 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Roboto+Slab:wght@400;600;700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Times New Roman", serif;
 }
 
-
 body {
-    background: #e4e4e4;
+    background-color: #1b1b1b;
+    /* Mantém 100vh para telas grandes, como o index.css */
+    height: 100vh; 
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px; 
-    min-height: 100vh;
+    font-family: 'Roboto Slab', serif;
 }
 
-
+/* CONTAINER */
 .container {
-    width: 420px;
-    max-width: 95%; 
-    background: white;
-    border-radius: 8px;
-    overflow: hidden;
-    border: 1px solid #cfcfcf;
+    width: 90%;
+    /* Aumentado o max-width para dar uma aparência maior, mais parecida com o index.css */
+    max-width: 800px; 
+    /* Adicionada altura para preencher a tela verticalmente, como o index.css */
+    height: 95vh; 
+    background-color: white;
+    border-radius: 10px;
+    /* Alterado de hidden para auto para permitir a rolagem se necessário */
+    overflow: auto; 
+    padding-bottom: 40px;
 }
 
-
+/* HEADER */
 .header {
     background: #12385c;
-    padding: 20px;
+    padding: 30px 20px;
     text-align: center;
 }
 
 .header h1 {
-    color: #ffa726;
-    font-size: 22px;
-    font-weight: bold;
-    text-transform: uppercase;
+    font-family: 'Alfa Slab One', cursive;
+    color: #f47b20;
+    font-size: 1.9rem;
 }
 
-
+/* CONTEÚDO */
 .content {
-    padding: 35px 25px;
+    padding: 30px 20px;
     text-align: center;
 }
 
 .content h2 {
-    font-size: 12px;
+    font-size: 0.85rem;
+    font-weight: 700;
     letter-spacing: 1px;
     margin-bottom: 25px;
-    font-weight: bold;
 }
 
-
+/* BOTÕES DE NÍVEL */
 .btn {
     width: 100%;
-    max-width: 250px;
+    /* Mantido o max-width para desktop, será alterado no media query */
+    max-width: 260px; 
     padding: 12px;
     background: #f3f3f3;
-    border: 1px solid #d3d3d3;
+    border: 1px solid #ccc;
     border-radius: 8px;
     margin: 10px auto;
     cursor: pointer;
-    font-size: 14px;
     font-weight: bold;
-    transition: 0.2s;
+    font-size: 0.9rem;
+    transition: 0.3s;
 }
 
 .btn:hover {
@@ -76,83 +81,102 @@ body {
     border-color: #7da7d9;
 }
 
-
+/* BOTÃO CONFIRMAR */
 .confirmar {
     margin-top: 25px;
+    width: 100%;
+    /* Mantido o max-width para desktop, será alterado no media query */
+    max-width: 180px; 
+    padding: 12px;
     background: #12385c;
     color: white;
-    width: 100%;
-    max-width: 180px;
-    padding: 12px;
     border: none;
     border-radius: 8px;
     cursor: pointer;
-    font-size: 15px;
-    font-weight: bold;
-    transition: 0.2s;
+    font-weight: 800;
+    font-size: 0.95rem;
+    transition: 0.3s;
 }
 
 .confirmar:hover {
-    background: #0d2b47;
+    opacity: 0.9;
 }
 
+/* RESPONSIVIDADE OTIMIZADA PARA CELULARES */
 
+/* Regras para telas até 768px (tablets e celulares) */
 @media (max-width: 768px) {
+    body {
+        /* ESSENCIAL: Permite que o body se ajuste ao conteúdo em celulares */
+        height: auto; 
+        padding: 25px 0;
+    }
+
+    .container {
+        width: 95%;
+        /* ESSENCIAL: Remove o limite de 800px para preencher a tela do celular */
+        max-width: none; 
+        /* ESSENCIAL: Remove a altura fixa em celulares */
+        height: auto; 
+    }
+
     .header h1 {
-        font-size: 20px;
+        font-size: 1.6rem;
     }
 
     .content h2 {
-        font-size: 11px;
+        font-size: 0.8rem;
     }
 
+    /* Botões agora ocupam a largura total do container */
     .btn {
-        font-size: 14px;
-        padding: 12px;
-    }
-}
-
-
-@media (max-width: 480px) {
-    .header h1 {
-        font-size: 18px;
-    }
-
-    .content {
-        padding: 25px 18px;
-    }
-
-    .btn {
-        font-size: 13px;
-        padding: 10px;
-        max-width: 220px;
+        max-width: 100%;
+        font-size: 0.85rem;
     }
 
     .confirmar {
-        font-size: 14px;
-        padding: 10px;
-        max-width: 160px;
+        max-width: 100%;
     }
 }
 
-
-@media (max-width: 360px) {
+/* Regras para telas até 480px (celulares menores) */
+@media (max-width: 480px) {
     .header h1 {
-        font-size: 16px;
+        font-size: 1.4rem;
+    }
+
+    .content {
+        padding: 25px 15px;
     }
 
     .btn {
-        max-width: 200px;
-        font-size: 12px;
+        padding: 10px;
+        font-size: 0.8rem;
+    }
+
+    .confirmar {
+        padding: 10px;
+        font-size: 0.85rem;
+    }
+}
+
+/* Regras para telas até 360px (celulares muito pequenos) */
+@media (max-width: 360px) {
+    .header h1 {
+        font-size: 1.25rem;
+    }
+
+    .content h2 {
+        font-size: 0.75rem;
+    }
+
+    .btn {
+        font-size: 0.75rem;
         padding: 9px;
     }
 
     .confirmar {
-        max-width: 150px;
-        font-size: 13px;
-    }
-
-    .content h2 {
-        font-size: 10px;
+        font-size: 0.8rem;
+        padding: 9px;
     }
 }
